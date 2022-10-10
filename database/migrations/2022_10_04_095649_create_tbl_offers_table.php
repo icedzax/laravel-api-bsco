@@ -17,9 +17,9 @@ class CreateTblOffersTable extends Migration
         Schema::create('tbl_offer', function (Blueprint $table) {
 
             $table->id();
-            $table->bigInteger('user_id');
+            // $table->bigInteger('user_id');
             $table->bigInteger('company_id');
-            $table->bigInteger('pic_id');
+            $table->bigInteger('pic_id')->nullable();
             $table->string('matgroup', 10);
             $table->string('matcode', 32);
             $table->string('matdesc', 100);

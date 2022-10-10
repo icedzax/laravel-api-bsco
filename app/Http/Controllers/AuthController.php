@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Tbl_company;
 use App\Models\Tbl_pic;
+
 use App\Models\Tbl_pic_list;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -22,6 +23,8 @@ class AuthController extends Controller
             'type' => 'required|string',
             'note' => 'required|string',
             'pic' => '',
+            'sname' => '',
+            'userId' => '',
 
         ]);
 
@@ -32,28 +35,39 @@ class AuthController extends Controller
             'website' => $fields['website'],
             'type' => $fields['type'],
             'note' => $fields['note'],
+            'userId' => $fields['userId'],
+            'line_name' => $fields['sname'],
 
         ]);
+
+        // User::create([
+        //     'name' => $fields['sname'],
+        //     'userId' => $fields['userId'],
+
+        // ]);
 
         // $pic = Tbl_pic::insert($fields['pic']);
 
         foreach ($fields['pic'] as $key => $value) {
+            if ($value['name'] !== null) {
+                $pic = Tbl_pic::create([
+                    'name' => $value['name'],
+                    'surname' => $value['surname'],
+                    'position' => $value['position'],
+                    'nationality' => $value['nationality'],
+                    'tel' => $value['tel'],
+                    'email' => $value['email'],
+                    'note' => $value['note'],
+                ]);
 
-            $pic = Tbl_pic::create([
-                'name' => $value['name'],
-                'surname' => $value['surname'],
-                'position' => $value['position'],
-                'nationality' => $value['nationality'],
-                'tel' => $value['tel'],
-                'email' => $value['email'],
-                'note' => $value['note'],
-            ]);
-
-            Tbl_pic_list::create([
-                'company_id' => $company['id'],
-                'pic_id' => $pic->id,
-            ]);
+                Tbl_pic_list::create([
+                    'company_id' => $company['id'],
+                    'pic_id' => $pic->id,
+                ]);
+            }
         }
+
+
 
         $token = $company->createToken('myapptoken')->plainTextToken;
 
@@ -100,7 +114,7 @@ class AuthController extends Controller
         ]);
 
         // Check userId
-        $user = User::where('userId', $fields['userId'])->first();
+        $user = Tbl_company::where('userId', $fields['userId'])->first();
 
         // Check password
         if (!$user) {
@@ -109,11 +123,11 @@ class AuthController extends Controller
             ], 401);
         }
 
-        $token = $user->createToken('myapptoken')->plainTextToken;
+        // $token = $user->createToken('myapptoken')->plainTextToken;
 
         $response = [
             'user' => $user,
-            'token' => $token
+            // 'token' => $token
         ];
 
         return response($response, 201);

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Tbl_company extends Authenticatable
+class Tbl_user extends Authenticatable
 {
     use HasFactory, Notifiable, HasApiTokens;
 
@@ -17,19 +17,10 @@ class Tbl_company extends Authenticatable
      *
      * @var array
      */
+    protected $guarded = [];
+    protected $table = 'tbl_user';
 
-    protected $table = 'tbl_company';
-
-    protected $fillable = [
-        'name',
-        'country',
-        'address',
-        'website',
-        'type',
-        'note',
-        'userId',
-        'line_name'
-    ];
+    protected $fillable = [];
 
 
 

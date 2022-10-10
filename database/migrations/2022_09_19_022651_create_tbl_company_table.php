@@ -18,6 +18,8 @@ class CreateTblCompanyTable extends Migration
             $table->id();
 
             $table->string('name', 100);
+            $table->string('line_name', 100);
+            $table->string('userId', 100);
             $table->string('address');
             $table->decimal('lat', 12, 9)->nullable();
             $table->decimal('long', 12, 9)->nullable();

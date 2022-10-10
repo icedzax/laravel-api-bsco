@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Tbl_offer;
-
+use App\Models\Tbl_company;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
@@ -17,7 +17,7 @@ class OfferController extends Controller
 
 
         $offer = Tbl_offer::create([
-            'user_id' => 1,
+
             'company_id' => 1,
             'pic_id' => 1,
             'matgroup' => 'matgroup',
@@ -44,5 +44,18 @@ class OfferController extends Controller
         ]);
 
         return response($offer, 201);
+    }
+    public function offer(Request $request)
+    {
+
+        $fields = $request->validate([
+            'userId' => 'string',
+        ]);
+
+        $comp = Tbl_company::where('userId', $fields['userId'])->first();
+
+        $offer = Tbl_offer::where('company_id', $comp['id'])->get();
+
+        return response($offer, 200);
     }
 }
