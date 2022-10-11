@@ -69,11 +69,11 @@ class AuthController extends Controller
 
 
 
-        $token = $company->createToken('myapptoken')->plainTextToken;
+        // $token = $company->createToken('myapptoken')->plainTextToken;
 
         $response = [
             'user' => $company,
-            'token' => $token
+            // 'token' => $token
         ];
 
         return response($response, 201);
@@ -118,9 +118,7 @@ class AuthController extends Controller
 
         // Check password
         if (!$user) {
-            return response([
-                'message' => 'Bad creds'
-            ], 401);
+            return response([], 200);
         }
 
         // $token = $user->createToken('myapptoken')->plainTextToken;

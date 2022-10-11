@@ -15,10 +15,10 @@ class OfferController extends Controller
     {
         $fields = $request;
 
-
+        // test git cpanel
         $offer = Tbl_offer::create([
 
-            'company_id' => 1,
+            'company_id' => $fields['company_id'],
             'pic_id' => 1,
             'matgroup' => 'matgroup',
             'matcode' => 'matcode',
@@ -37,7 +37,7 @@ class OfferController extends Controller
             'ship_date' => $fields['ship_date'],
             // 'validity_start' => $fields['validity_start'],
             // 'validity_time' => $fields['valid_time'],
-            'offer_status' => 'xx',
+            'offer_status' => 'open',
             'remark' => 'xx',
 
 
