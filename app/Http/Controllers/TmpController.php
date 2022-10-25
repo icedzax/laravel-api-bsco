@@ -28,7 +28,9 @@ class TmpController extends Controller
     {
         // return view('vendor.pagination.default', [
         return view('mb51', [
-            'paginator' =>  zzmb51tmp::paginate(1000)
+            'paginator' =>  zzmb51tmp::paginate(10)
         ]);
     }
+
+
 }

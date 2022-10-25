@@ -9,6 +9,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Styles -->
     <style>
@@ -58,7 +59,7 @@
             height: auto
         }
 
-        .bg-white {
+        /* .bg-white {
             --bg-opacity: 1;
             background-color: #fff;
             background-color: rgba(255, 255, 255, var(--bg-opacity))
@@ -288,7 +289,7 @@
 
         .grid-cols-1 {
             grid-template-columns: repeat(1, minmax(0, 1fr))
-        }
+        } */
 
         @media (min-width:640px) {
             .sm\:rounded-lg {
@@ -414,188 +415,188 @@
         </div>
         @endif
 
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-full px-2">
             <div class="container">
 
-                    <table class="table" >
-                      <thead>
+                    <table class="table table-auto border border-gray-300 px-1" >
+                      <thead class="">
                         <tr>
-                            <th scope='col'>MANDT</th>
-                            <th scope='col'>MBLNR</th>
-                            <th scope='col'>MJAHR</th>
-                            <th scope='col'>ZEILE</th>
-                            <th scope='col'>BUDAT</th>
-                            <th scope='col'>GRADE</th>
-                            <th scope='col'>USNAM</th>
-                            <th scope='col'>SJAHR</th>
-                            <th scope='col'>SMBLN</th>
-                            <th scope='col'>SMBLP</th>
-                            <th scope='col'>CHARG</th>
-                            <th scope='col'>HKONT</th>
-                            <th scope='col'>MTXT50</th>
-                            <th scope='col'>SAKTO</th>
-                            <th scope='col'>TXT50</th>
-                            <th scope='col'>KOSTL</th>
-                            <th scope='col'>BWART</th>
-                            <th scope='col'>BTEXT</th>
-                            <th scope='col'>GRUND</th>
-                            <th scope='col'>LGORT</th>
-                            <th scope='col'>UMLGO</th>
-                            <th scope='col'>VLPLA</th>
-                            <th scope='col'>UMWRK</th>
-                            <th scope='col'>UMCHA</th>
-                            <th scope='col'>UMMAT</th>
-                            <th scope='col'>MATNR</th>
-                            <th scope='col'>MTART</th>
-                            <th scope='col'>WRKST</th>
-                            <th scope='col'>MAKTX</th>
-                            <th scope='col'>DMBTR</th>
-                            <th scope='col'>SMBTR</th>
-                            <th scope='col'>FMBTR</th>
-                            <th scope='col'>PERKG</th>
-                            <th scope='col'>WEMPF</th>
-                            <th scope='col'>GEWEI</th>
-                            <th scope='col'>AUFNR</th>
-                            <th scope='col'>EBELN</th>
-                            <th scope='col'>EBELP</th>
-                            <th scope='col'>MENGE</th>
-                            <th scope='col'>MEINS</th>
-                            <th scope='col'>ERFMG</th>
-                            <th scope='col'>ERFME</th>
-                            <th scope='col'>BPMNG</th>
-                            <th scope='col'>BPRME</th>
-                            <th scope='col'>BKTXT</th>
-                            <th scope='col'>BLDAT</th>
-                            <th scope='col'>BUKRS</th>
-                            <th scope='col'>CPUDT</th>
-                            <th scope='col'>CPUTM</th>
-                            <th scope='col'>SHKZG</th>
-                            <th scope='col'>SGTXT</th>
-                            <th scope='col'>LIFNR</th>
-                            <th scope='col'>NLIFNR</th>
-                            <th scope='col'>KUNNR</th>
-                            <th scope='col'>NKUNNR</th>
-                            <th scope='col'>ANLN1</th>
-                            <th scope='col'>ANLN2</th>
-                            <th scope='col'>VGART</th>
-                            <th scope='col'>POWAERS</th>
-                            <th scope='col'>POWKURS</th>
-                            <th scope='col'>WAERS</th>
-                            <th scope='col'>NETPR</th>
-                            <th scope='col'>PEINH</th>
-                            <th scope='col'>VATPR</th>
-                            <th scope='col'>NETLC</th>
-                            <th scope='col'>WERKS</th>
-                            <th scope='col'>XAUTO</th>
-                            <th scope='col'>XBLNR</th>
-                            <th scope='col'>WADAT_IST</th>
-                            <th scope='col'>NTGEW</th>
-                            <th scope='col'>CLGEW</th>
-                            <th scope='col'>WEMPC</th>
-                            <th scope='col'>ZTOLR</th>
-                            <th scope='col'>DIFPC</th>
-                            <th scope='col'>BANFN</th>
-                            <th scope='col'>BNFPO</th>
-                            <th scope='col'>PRMENGE</th>
-                            <th scope='col'>PRMEINS</th>
-                            <th scope='col'>AFNAM</th>
-                            <th scope='col'>AVGEW</th>
-                            <th scope='col'>AVGEWPC</th>
-                            <th scope='col'>ABLAD</th>
-                            <th scope='col'>VKGRP</th>
-                            <th scope='col'>BEZEI</th>
-                            <th scope='col'>VKBUR</th>
+                            <th scope='col' class="border border-gray-300 px-1">MANDT</th>
+                            <th scope='col' class="border border-gray-300 px-1">MBLNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">MJAHR</th>
+                            <th scope='col' class="border border-gray-300 px-1">ZEILE</th>
+                            <th scope='col' class="border border-gray-300 px-1">BUDAT</th>
+                            <th scope='col' class="border border-gray-300 px-1">GRADE</th>
+                            <th scope='col' class="border border-gray-300 px-1">USNAM</th>
+                            <th scope='col' class="border border-gray-300 px-1">SJAHR</th>
+                            <th scope='col' class="border border-gray-300 px-1">SMBLN</th>
+                            <th scope='col' class="border border-gray-300 px-1">SMBLP</th>
+                            <th scope='col' class="border border-gray-300 px-8">CHARG</th>
+                            <th scope='col' class="border border-gray-300 px-1">HKONT</th>
+                            <th scope='col' class="border border-gray-300 px-12">MTXT50</th>
+                            <th scope='col' class="border border-gray-300 px-1">SAKTO</th>
+                            <th scope='col' class="border border-gray-300 px-24">TXT50</th>
+                            <th scope='col' class="border border-gray-300 px-1">KOSTL</th>
+                            <th scope='col' class="border border-gray-300 px-1">BWART</th>
+                            <th scope='col' class="border border-gray-300 px-24">BTEXT</th>
+                            <th scope='col' class="border border-gray-300 px-1">GRUND</th>
+                            <th scope='col' class="border border-gray-300 px-1">LGORT</th>
+                            <th scope='col' class="border border-gray-300 px-1">UMLGO</th>
+                            <th scope='col' class="border border-gray-300 px-1">VLPLA</th>
+                            <th scope='col' class="border border-gray-300 px-1">UMWRK</th>
+                            <th scope='col' class="border border-gray-300 px-12">UMCHA</th>
+                            <th scope='col' class="border border-gray-300 px-1">UMMAT</th>
+                            <th scope='col' class="border border-gray-300 px-1">MATNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">MTART</th>
+                            <th scope='col' class="border border-gray-300 px-1">WRKST</th>
+                            <th scope='col' class="border border-gray-300 px-24">MAKTX</th>
+                            <th scope='col' class="border border-gray-300 px-1">DMBTR</th>
+                            <th scope='col' class="border border-gray-300 px-1">SMBTR</th>
+                            <th scope='col' class="border border-gray-300 px-1">FMBTR</th>
+                            <th scope='col' class="border border-gray-300 px-1">PERKG</th>
+                            <th scope='col' class="border border-gray-300 px-1">WEMPF</th>
+                            <th scope='col' class="border border-gray-300 px-1">GEWEI</th>
+                            <th scope='col' class="border border-gray-300 px-1">AUFNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">EBELN</th>
+                            <th scope='col' class="border border-gray-300 px-1">EBELP</th>
+                            <th scope='col' class="border border-gray-300 px-1">MENGE</th>
+                            <th scope='col' class="border border-gray-300 px-1">MEINS</th>
+                            <th scope='col' class="border border-gray-300 px-1">ERFMG</th>
+                            <th scope='col' class="border border-gray-300 px-1">ERFME</th>
+                            <th scope='col' class="border border-gray-300 px-1">BPMNG</th>
+                            <th scope='col' class="border border-gray-300 px-1">BPRME</th>
+                            <th scope='col' class="border border-gray-300 px-8">BKTXT</th>
+                            <th scope='col' class="border border-gray-300 px-1">BLDAT</th>
+                            <th scope='col' class="border border-gray-300 px-1">BUKRS</th>
+                            <th scope='col' class="border border-gray-300 px-1">CPUDT</th>
+                            <th scope='col' class="border border-gray-300 px-1">CPUTM</th>
+                            <th scope='col' class="border border-gray-300 px-1">SHKZG</th>
+                            <th scope='col' class="border border-gray-300 px-1">SGTXT</th>
+                            <th scope='col' class="border border-gray-300 px-1">LIFNR</th>
+                            <th scope='col' class="border border-gray-300 px-24">NLIFNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">KUNNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">NKUNNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">ANLN1</th>
+                            <th scope='col' class="border border-gray-300 px-1">ANLN2</th>
+                            <th scope='col' class="border border-gray-300 px-1">VGART</th>
+                            <th scope='col' class="border border-gray-300 px-1">POWAERS</th>
+                            <th scope='col' class="border border-gray-300 px-1">POWKURS</th>
+                            <th scope='col' class="border border-gray-300 px-1">WAERS</th>
+                            <th scope='col' class="border border-gray-300 px-1">NETPR</th>
+                            <th scope='col' class="border border-gray-300 px-1">PEINH</th>
+                            <th scope='col' class="border border-gray-300 px-1">VATPR</th>
+                            <th scope='col' class="border border-gray-300 px-1">NETLC</th>
+                            <th scope='col' class="border border-gray-300 px-1">WERKS</th>
+                            <th scope='col' class="border border-gray-300 px-1">XAUTO</th>
+                            <th scope='col' class="border border-gray-300 px-1">XBLNR</th>
+                            <th scope='col' class="border border-gray-300 px-1">WADAT_IST</th>
+                            <th scope='col' class="border border-gray-300 px-1">NTGEW</th>
+                            <th scope='col' class="border border-gray-300 px-1">CLGEW</th>
+                            <th scope='col' class="border border-gray-300 px-1">WEMPC</th>
+                            <th scope='col' class="border border-gray-300 px-1">ZTOLR</th>
+                            <th scope='col' class="border border-gray-300 px-1">DIFPC</th>
+                            <th scope='col' class="border border-gray-300 px-1">BANFN</th>
+                            <th scope='col' class="border border-gray-300 px-1">BNFPO</th>
+                            <th scope='col' class="border border-gray-300 px-1">PRMENGE</th>
+                            <th scope='col' class="border border-gray-300 px-1">PRMEINS</th>
+                            <th scope='col' class="border border-gray-300 px-10">AFNAM</th>
+                            <th scope='col' class="border border-gray-300 px-1">AVGEW</th>
+                            <th scope='col' class="border border-gray-300 px-1">AVGEWPC</th>
+                            <th scope='col' class="border border-gray-300 px-1">ABLAD</th>
+                            <th scope='col' class="border border-gray-300 px-1">VKGRP</th>
+                            <th scope='col' class="border border-gray-300 px-1">BEZEI</th>
+                            <th scope='col' class="border border-gray-300 px-1">VKBUR</th>
 
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody class="text-center">
                         @foreach($paginator as $data)
-                        <tr>
-                            <td>{{$data->MANDT}}</td>
-                            <td>{{$data->MBLNR}}</td>
-                            <td>{{$data->MJAHR}}</td>
-                            <td>{{$data->ZEILE}}</td>
-                            <td>{{$data->BUDAT}}</td>
-                            <td>{{$data->GRADE}}</td>
-                            <td>{{$data->USNAM}}</td>
-                            <td>{{$data->SJAHR}}</td>
-                            <td>{{$data->SMBLN}}</td>
-                            <td>{{$data->SMBLP}}</td>
-                            <td>{{$data->CHARG}}</td>
-                            <td>{{$data->HKONT}}</td>
-                            <td>{{$data->MTXT50}}</td>
-                            <td>{{$data->SAKTO}}</td>
-                            <td>{{$data->TXT50}}</td>
-                            <td>{{$data->KOSTL}}</td>
-                            <td>{{$data->BWART}}</td>
-                            <td>{{$data->BTEXT}}</td>
-                            <td>{{$data->GRUND}}</td>
-                            <td>{{$data->LGORT}}</td>
-                            <td>{{$data->UMLGO}}</td>
-                            <td>{{$data->VLPLA}}</td>
-                            <td>{{$data->UMWRK}}</td>
-                            <td>{{$data->UMCHA}}</td>
-                            <td>{{$data->UMMAT}}</td>
-                            <td>{{$data->MATNR}}</td>
-                            <td>{{$data->MTART}}</td>
-                            <td>{{$data->WRKST}}</td>
-                            <td>{{$data->MAKTX}}</td>
-                            <td>{{$data->DMBTR}}</td>
-                            <td>{{$data->SMBTR}}</td>
-                            <td>{{$data->FMBTR}}</td>
-                            <td>{{$data->PERKG}}</td>
-                            <td>{{$data->WEMPF}}</td>
-                            <td>{{$data->GEWEI}}</td>
-                            <td>{{$data->AUFNR}}</td>
-                            <td>{{$data->EBELN}}</td>
-                            <td>{{$data->EBELP}}</td>
-                            <td>{{$data->MENGE}}</td>
-                            <td>{{$data->MEINS}}</td>
-                            <td>{{$data->ERFMG}}</td>
-                            <td>{{$data->ERFME}}</td>
-                            <td>{{$data->BPMNG}}</td>
-                            <td>{{$data->BPRME}}</td>
-                            <td>{{$data->BKTXT}}</td>
-                            <td>{{$data->BLDAT}}</td>
-                            <td>{{$data->BUKRS}}</td>
-                            <td>{{$data->CPUDT}}</td>
-                            <td>{{$data->CPUTM}}</td>
-                            <td>{{$data->SHKZG}}</td>
-                            <td>{{$data->SGTXT}}</td>
-                            <td>{{$data->LIFNR}}</td>
-                            <td>{{$data->NLIFNR}}</td>
-                            <td>{{$data->KUNNR}}</td>
-                            <td>{{$data->NKUNNR}}</td>
-                            <td>{{$data->ANLN1}}</td>
-                            <td>{{$data->ANLN2}}</td>
-                            <td>{{$data->VGART}}</td>
-                            <td>{{$data->POWAERS}}</td>
-                            <td>{{$data->POWKURS}}</td>
-                            <td>{{$data->WAERS}}</td>
-                            <td>{{$data->NETPR}}</td>
-                            <td>{{$data->PEINH}}</td>
-                            <td>{{$data->VATPR}}</td>
-                            <td>{{$data->NETLC}}</td>
-                            <td>{{$data->WERKS}}</td>
-                            <td>{{$data->XAUTO}}</td>
-                            <td>{{$data->XBLNR}}</td>
-                            <td>{{$data->WADAT_IST}}</td>
-                            <td>{{$data->NTGEW}}</td>
-                            <td>{{$data->CLGEW}}</td>
-                            <td>{{$data->WEMPC}}</td>
-                            <td>{{$data->ZTOLR}}</td>
-                            <td>{{$data->DIFPC}}</td>
-                            <td>{{$data->BANFN}}</td>
-                            <td>{{$data->BNFPO}}</td>
-                            <td>{{$data->PRMENGE}}</td>
-                            <td>{{$data->PRMEINS}}</td>
-                            <td>{{$data->AFNAM}}</td>
-                            <td>{{$data->AVGEW}}</td>
-                            <td>{{$data->AVGEWPC}}</td>
-                            <td>{{$data->ABLAD}}</td>
-                            <td>{{$data->VKGRP}}</td>
-                            <td>{{$data->BEZEI}}</td>
-                            <td>{{$data->VKBUR}}</td>
+                        <tr class="border border-gray-300 px-1">
+                            <td class="border border-gray-300 px-2">{{$data->MANDT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MBLNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MJAHR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ZEILE}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BUDAT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->GRADE}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->USNAM}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SJAHR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SMBLN}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SMBLP}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->CHARG}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->HKONT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MTXT50}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SAKTO}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->TXT50}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->KOSTL}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BWART}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BTEXT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->GRUND}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->LGORT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->UMLGO}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->VLPLA}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->UMWRK}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->UMCHA}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->UMMAT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MATNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MTART}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WRKST}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MAKTX}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->DMBTR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SMBTR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->FMBTR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->PERKG}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WEMPF}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->GEWEI}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->AUFNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->EBELN}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->EBELP}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MENGE}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->MEINS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ERFMG}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ERFME}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BPMNG}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BPRME}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BKTXT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BLDAT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BUKRS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->CPUDT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->CPUTM}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SHKZG}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->SGTXT}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->LIFNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->NLIFNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->KUNNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->NKUNNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ANLN1}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ANLN2}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->VGART}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->POWAERS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->POWKURS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WAERS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->NETPR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->PEINH}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->VATPR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->NETLC}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WERKS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->XAUTO}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->XBLNR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WADAT_IST}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->NTGEW}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->CLGEW}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->WEMPC}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ZTOLR}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->DIFPC}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BANFN}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BNFPO}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->PRMENGE}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->PRMEINS}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->AFNAM}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->AVGEW}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->AVGEWPC}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->ABLAD}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->VKGRP}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->BEZEI}}</td>
+                            <td class="border border-gray-300 px-2">{{$data->VKBUR}}</td>
 
                         </tr>
                         @endforeach
@@ -603,6 +604,7 @@
                     </table>
                 <h5>Pagination:</h5>
                 {{ $paginator->links() }}
+                <!-- {{$paginator->count()}} -->
              </div>
         </div>
     </div>
