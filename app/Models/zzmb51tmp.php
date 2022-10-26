@@ -18,7 +18,7 @@ class zzmb51tmp extends Authenticatable
      * @var array
      */
     protected $guarded = [];
-    protected $table = 'zzmb51tmp';
+    protected $table = 'vw_zzmb51tmp';
 
     protected $fillable = [];
 
