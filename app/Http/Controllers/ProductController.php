@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\zzmb51tmp;
+
 
 class ProductController extends Controller
 {
@@ -76,8 +78,19 @@ class ProductController extends Controller
      * @param  str  $name
      * @return \Illuminate\Http\Response
      */
-    public function search($name)
+    public function search(Request $request)
     {
-        return Product::where('name', 'like', '%'.$name.'%')->get();
+        
+        //  $product = zzmb51tmp::query();
+        
+        // echo "TEST เข้ามามั้ย";
+        // if ($request('name')) {
+        //     // $product->where('name', 'Like', '%' . request('term') . '%');
+        // }
+        //$product = Product::where('name', 'like', '%'.$name.'%')->get();
+        // return view('mb51', [
+        //     'paginator' =>  $product,
+        // ]);
+        return [$request,200];
     }
 }

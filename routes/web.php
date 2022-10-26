@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TmpController;
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +26,4 @@ Route::get('/page', function () {
 
 
 Route::get('/mb51', [TmpController::class, 'w']);
+Route::get('/products/search/{name}', [ProductController::class, 'search']);

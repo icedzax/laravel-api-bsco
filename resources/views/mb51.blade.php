@@ -9,9 +9,9 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    <!-- Styles -->
 
-    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
         html {
@@ -65,7 +65,7 @@
             background-color: rgba(255, 255, 255, var(--bg-opacity))
         }
 
-        .bg-gray-100 {
+        .bg-blue-100 {
             --bg-opacity: 1;
             background-color: #f7fafc;
             background-color: rgba(247, 250, 252, var(--bg-opacity))
@@ -400,7 +400,58 @@
 </head>
 
 <body class="antialiased">
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <form action="{{ url('/mb51') }}"  method="get" role="search" >
+           
+            <div class="px-2 pb-1 mx-2 grid overflow-hidden grid-cols-4 grid-rows-2 gap-2 text-blue-600  text-sm">
+                <div>
+                    <div class="">Material</div>
+                    <input type="text" class="text-gray-500 form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Material" placeholder="Search Material" id="term">
+                </div>
+                <div>
+                    <div>Material Type</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="MaterialT" placeholder="Search Material Type" id="term">
+                </div>
+                <div>
+                    <div>Plant</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Plant" placeholder="Search Plant" id="term">
+                </div>
+                <div>
+                    <div>Storage Location</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Location" placeholder="Search Location" id="term">
+                </div>
+                <!---    --->
+                <div>
+                    <div>Batch</div>
+                    <input type="text" class=" form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Batch" placeholder="Search Batch" id="term">
+                </div>
+                <div>
+                    <div>Vendor</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Vendor" placeholder="Search Vendor" id="term">
+                </div>
+                <div>
+                    <div>Customer</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="Customer" placeholder="Search Customer" id="term">
+                </div>
+                <div>
+                    <div>Movement Type</div>
+                    <input type="text" class="form-control mr-2 bg-blue-100 px-2 py-1 rounded-lg focus:outline-indigo-500 w-full" name="MovementT" placeholder="Search Movement Type" id="term">
+                </div>
+            </div>
+            <span class="flex justify-end mr-4 my-1">
+                <button class="btn btn-info" type="submit" title="Search">
+                    <i class="fa fa-search text-indigo-500" aria-hidden="true"></i>
+                </button>
+            </span>
+            {{-- <a href="#" class="">
+                <span class="">
+                    <button class="btn btn-danger" type="button" title="Refresh page">
+                        <span class="fas fa-sync-alt"></span>
+                    </button>
+                </span>
+            </a> --}}
+        </form>
+        
+    <div class="relative flex items-top justify-center min-h-screen bg-blue-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
@@ -414,11 +465,11 @@
             @endauth
         </div>
         @endif
-
+        
         <div class="max-w-full px-2">
             <div class="container">
 
-                    <table class="table table-auto border border-gray-300 px-1" >
+                    <table class="table table-auto border border-gray-300 px-1 bg-white" >
                       <thead class="">
                         <tr>
                             <th scope='col' class="border border-gray-300 px-1">MANDT</th>
